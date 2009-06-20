@@ -1,1 +1,0 @@
-jQuery.noConflict(); jQuery(document).ready(function() { jQuery("#open").click(function(){ jQuery("div#panel").slideDown("slow");}); jQuery("#close").click(function(){ jQuery("div#panel").slideUp("slow");}); jQuery("#toggle a").click(function () { jQuery("#toggle a").toggle();});}); 
