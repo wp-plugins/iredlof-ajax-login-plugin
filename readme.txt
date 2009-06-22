@@ -1,10 +1,10 @@
 === iRedlof Ajax Login ===
 Contributors: Rohit LalChandani
 Donate link: http://iredlof.com
-Tags: iredlof, ajax login, top panel,login, register, forgot password
+Tags: iredlof, Ajax, top panel, plugin, Login, Register, Ajax Login
 Requires at least: 2.7.1
 Tested up to: 2.8
-Stable tag: 2.2
+Stable tag: 2.2.1
 
 Add a beautiful Javascript loaded Login/Register top panel to your wordpress theme.
 
@@ -66,7 +66,9 @@ Leave a comment http://iredlof.com/2009/04/iredlof-ajax-login-wordpress-plugin/
 == Change Log ==
 
 <pre><code>
-Version 2.1
+Version 2.2.1
+	Removed bugs
+Version 2.2
 	Now Works out of the box, Folder name not to be changed now
 	Addition of forgot password section
 	Optimized code for W3c Validation

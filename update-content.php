@@ -1,7 +1,6 @@
 <?php 
 function updateHeader()
 {
-	echo('<link rel="stylesheet" href="'.PLUGINDIR.'/'.dirname(plugin_basename(__FILE__)).'/style.css" type="text/css" media="screen" />'."\n");
 	global $user_ID, $current_user;
 	get_currentuserinfo();
 	?>
