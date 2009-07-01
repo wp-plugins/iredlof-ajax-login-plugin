@@ -1,6 +1,7 @@
 <?php 
 function updateHeader()
 {
+	echo('<link rel="stylesheet" href="'.PLUGINDIR.'/'.dirname(plugin_basename(__FILE__)).'/style.css" type="text/css" media="screen" />'."\n");
 	global $user_ID, $current_user;
 	get_currentuserinfo();
 	?>
@@ -26,7 +27,7 @@ function updateHeader()
 				<?php endforeach; }?></p><br/>
 				<h2 style="border-top:1px dotted #fff;">Dashboard</h2>
 				<ul>					
-					<li><a href="<?php bloginfo('url') ?>/wp-admin/index.php">Go to Dashboard</a></li>
+					<li><a href="<?php bloginfo('wpurl') ?>/wp-admin/index.php">Go to Dashboard</a></li>
 				</ul>
                 <h2 style="border-top:1px dotted #fff;">Comment</h2>
 				<ul>Comment <a href="http://iredlof.com/2009/04/iredlof-ajax-login-wordpress-plugin/#respond" title="Download">here</a> if you like this plugin.</ul>
@@ -35,19 +36,19 @@ function updateHeader()
             <div class="left narrow">			
 				<h2>My Account</h2>				
 				<ul>					
-					<li><a href="<?php bloginfo('url') ?>/wp-admin/index.php">Global Dashboard</a></li>
-					<li><a href="<?php bloginfo('url') ?>/wp-admin/profile.php">Edit My Profile</a></li>
+					<li><a href="<?php bloginfo('wpurl') ?>/wp-admin/index.php">Global Dashboard</a></li>
+					<li><a href="<?php bloginfo('wpurl') ?>/wp-admin/profile.php">Edit My Profile</a></li>
 					<?php if ( current_user_can('level_1') ) : ?>
-						<li><a href="<?php bloginfo('url') ?>/wp-admin/edit-comments.php">Comments</a></li>
+						<li><a href="<?php bloginfo('wpurl') ?>/wp-admin/edit-comments.php">Comments</a></li>
 					<?php endif ?>
 	        		<li><a href="<?php echo wp_logout_url(get_permalink()); ?>" rel="nofollow" title="<?php _e('Log out'); ?>"><?php _e('Log out'); ?></a></li>
 				</ul>
 				<?php if ( current_user_can('level_10') ) : ?>		
 				<h2>Appearance</h2>				
 				<ul>						
-					<li><a href="<?php bloginfo('url') ?>/wp-admin/themes.php">Themes</a></li>
-					<li><a href="<?php bloginfo('url') ?>/wp-admin/widgets.php">Widgets</a></li>
-					<li><a href="<?php bloginfo('url') ?>/wp-admin/theme-editor.php">Theme Editor</a></li>
+					<li><a href="<?php bloginfo('wpurl') ?>/wp-admin/themes.php">Themes</a></li>
+					<li><a href="<?php bloginfo('wpurl') ?>/wp-admin/widgets.php">Widgets</a></li>
+					<li><a href="<?php bloginfo('wpurl') ?>/wp-admin/theme-editor.php">Theme Editor</a></li>
 				</ul>
 				<?php endif ?>
 			</div>
@@ -57,19 +58,19 @@ function updateHeader()
             <div class="left narrow">			
 				<h2>Posts</h2>				
 				<ul>					
-					<li><a href="<?php bloginfo('url') ?>/wp-admin/post-new.php">New Post</a></li>
-					<li><a href="<?php bloginfo('url') ?>/wp-admin/edit.php">Edit Posts</a></li>
+					<li><a href="<?php bloginfo('wpurl') ?>/wp-admin/post-new.php">New Post</a></li>
+					<li><a href="<?php bloginfo('wpurl') ?>/wp-admin/edit.php">Edit Posts</a></li>
 				<?php if ( current_user_can('level_3') ) : ?>
-					<li><a href="<?php bloginfo('url') ?>/wp-admin/edit-tags.php">Tags</a></li>
-					<li><a href="<?php bloginfo('url') ?>/wp-admin/categories.php">Categories</a></li>
+					<li><a href="<?php bloginfo('wpurl') ?>/wp-admin/edit-tags.php">Tags</a></li>
+					<li><a href="<?php bloginfo('wpurl') ?>/wp-admin/categories.php">Categories</a></li>
 				<?php endif ?>
 				</ul>
 				<?php if ( current_user_can('level_10') ) : ?>		
 				<h2>Plugins</h2>				
 				<ul>						
-					<li><a href="<?php bloginfo('url') ?>/wp-admin/plugins.php">Plugins</a></li>
-					<li><a href="<?php bloginfo('url') ?>/wp-admin/plugin-install.php">Install a Plugin</a></li>
-					<li><a href="<?php bloginfo('url') ?>/wp-admin/plugin-editor.php">Plugin Editor</a></li>
+					<li><a href="<?php bloginfo('wpurl') ?>/wp-admin/plugins.php">Plugins</a></li>
+					<li><a href="<?php bloginfo('wpurl') ?>/wp-admin/plugin-install.php">Install a Plugin</a></li>
+					<li><a href="<?php bloginfo('wpurl') ?>/wp-admin/plugin-editor.php">Plugin Editor</a></li>
 				</ul>
 				<?php endif ?>
 			</div>
@@ -81,20 +82,20 @@ function updateHeader()
 				<?php if ( current_user_can('level_3') ) : ?>	
 				<h2>Pages</h2>				
 				<ul>		
-					<li><a href="<?php bloginfo('url') ?>/wp-admin/post-new.php">New Page</a></li>
-					<li><a href="<?php bloginfo('url') ?>/wp-admin/edit-pages.php">Edit Pages</a></li>
+					<li><a href="<?php bloginfo('wpurl') ?>/wp-admin/post-new.php">New Page</a></li>
+					<li><a href="<?php bloginfo('wpurl') ?>/wp-admin/edit-pages.php">Edit Pages</a></li>
 				</ul>
 				<?php endif ?>			
 				<h2>Library</h2>				
 				<ul>					
-					<li><a href="<?php bloginfo('url') ?>/wp-admin/upload.php">Library</a></li>
-					<li><a href="<?php bloginfo('url') ?>/wp-admin/media-new.php">Add New</a></li>
+					<li><a href="<?php bloginfo('wpurl') ?>/wp-admin/upload.php">Library</a></li>
+					<li><a href="<?php bloginfo('wpurl') ?>/wp-admin/media-new.php">Add New</a></li>
 				</ul>
 				<?php if ( current_user_can('level_3') ) : ?>		
 				<h2>Users</h2>				
 				<ul>						
-					<li><a href="<?php bloginfo('url') ?>/wp-admin/users.php">Author &amp; Users</a></li>
-					<li><a href="<?php bloginfo('url') ?>/wp-admin/user-new.php">Add New</a></li>
+					<li><a href="<?php bloginfo('wpurl') ?>/wp-admin/users.php">Author &amp; Users</a></li>
+					<li><a href="<?php bloginfo('wpurl') ?>/wp-admin/user-new.php">Add New</a></li>
 				</ul>
 				<?php endif ?>
 			</div>
@@ -105,14 +106,14 @@ function updateHeader()
             <div class="left narrow">			
 				<h2>Settings</h2>				
 				<ul>						
-					<li><a href="<?php bloginfo('url') ?>/wp-admin/options-general.php">General</a></li>
-					<li><a href="<?php bloginfo('url') ?>/wp-admin/options-writing.php">Writing</a></li>
-					<li><a href="<?php bloginfo('url') ?>/wp-admin/options-reading.php">Reading</a></li>
-					<li><a href="<?php bloginfo('url') ?>/wp-admin/options-discussion.php">Discussion</a></li>
-					<li><a href="<?php bloginfo('url') ?>/wp-admin/options-media.php">Media</a></li>
-					<li><a href="<?php bloginfo('url') ?>/wp-admin/options-privacy.php">Privacy</a></li>
-					<li><a href="<?php bloginfo('url') ?>/wp-admin/options-permalink.php">Permalinks</a></li>
-					<li><a href="<?php bloginfo('url') ?>/wp-admin/options-misc.php">Miscellaneous</a></li>
+					<li><a href="<?php bloginfo('wpurl') ?>/wp-admin/options-general.php">General</a></li>
+					<li><a href="<?php bloginfo('wpurl') ?>/wp-admin/options-writing.php">Writing</a></li>
+					<li><a href="<?php bloginfo('wpurl') ?>/wp-admin/options-reading.php">Reading</a></li>
+					<li><a href="<?php bloginfo('wpurl') ?>/wp-admin/options-discussion.php">Discussion</a></li>
+					<li><a href="<?php bloginfo('wpurl') ?>/wp-admin/options-media.php">Media</a></li>
+					<li><a href="<?php bloginfo('wpurl') ?>/wp-admin/options-privacy.php">Privacy</a></li>
+					<li><a href="<?php bloginfo('wpurl') ?>/wp-admin/options-permalink.php">Permalinks</a></li>
+					<li><a href="<?php bloginfo('wpurl') ?>/wp-admin/options-misc.php">Miscellaneous</a></li>
 				</ul>
 			</div>
 			
@@ -165,7 +166,7 @@ function updateHeader()
 			
             <div class="left" style="width:195px;">
 				<!-- Login Form -->
-				<form class="clearfix" action="<?php bloginfo('url') ?>/wp-login.php" method="post">
+				<form class="clearfix" action="<?php bloginfo('wpurl') ?>/wp-login.php" method="post">
 					<h1>Member Login</h1>
 					<label class="grey" for="log">Username:</label>
 					<input class="field" type="text" name="log" id="log" value="<?php echo wp_specialchars(stripslashes($user_login), 1) ?>" size="23" />
