@@ -4,7 +4,7 @@ Donate link: http://iredlof.com
 Tags: iredlof, Ajax, Top Panel, Toppanel, plugin, admin, Login, Register
 Requires at least: 2.7.1
 Tested up to: 2.8
-Stable tag: 2.3
+Stable tag: 2.3.1
 
 Add a beautiful Javascript loaded Login/Register top panel to your wordpress theme.
 
